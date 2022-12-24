@@ -3,6 +3,7 @@ from pydantic import BaseModel
 
 
 class DataTemplate(BaseModel):
-    id: int
+    country: str
+    city: str
     name: str
-    counter: int
+    net_worth: int

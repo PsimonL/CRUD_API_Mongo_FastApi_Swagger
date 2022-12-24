@@ -24,16 +24,16 @@ async def single_post(data: DataTemplate):
     single_data = SerializerForMultipleObjs(collection.find({"_id": _id.inserted_id}))
     return {"status": "OK", "single_data": single_data}
 
-# @router.put("/SingleUpdate/{id}")
-# async def single_update(id: str, data: DataTemplate):
-#     collection.find_one_and_update({"_id": ObjectId(id)}, {
+# @router.put("/SingleUpdate/{country}")
+# async def single_update(country: str, data: DataTemplate):
+#     collection.find_one_and_update({"_id": ObjectId(country)}, {
 #         "$set": dict(data)
 #     })
-#     return todos_serializer(collection.find({"_id": ObjectId(id)}))
+#     return todos_serializer(collection.find({"_id": ObjectId(country)}))
 #
-# @router.delete("/SingleDelete/{id}")
-# async def single_delete(id: str):
-#     collection.find_one_and_delete({"_id": ObjectId(id)})
+# @router.delete("/SingleDelete/{country}")
+# async def single_delete(country: str):
+#     collection.find_one_and_delete({"_id": ObjectId(country)})
 #     return {"status": "ok"}
 
 
