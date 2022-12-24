@@ -9,7 +9,7 @@ class DatabaseSetUp:
 
 
 initializer = DatabaseSetUp(
-    "",
-    "",
-    ""
+    "Mongo_DB_URL",
+    "Database_Name",
+    "Collection_Name"
 )

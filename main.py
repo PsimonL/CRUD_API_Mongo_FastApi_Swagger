@@ -1,5 +1,5 @@
 import uvicorn as uvicorn
-from fastapi import *
+from fastapi import FastAPI
 
 import server.routes
 
