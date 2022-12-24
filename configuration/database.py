@@ -1,7 +1,14 @@
 from pymongo import MongoClient
 
+class DatabaseSetUp:
+    def __init__(self, mongoClientURL, dbName, collectionName):
+        self.client = MongoClient(mongoClientURL)
+        self.database = self.client[dbName]
+        self.collection = self.database[collectionName]
 
-client = MongoClient("")
-database = client[""]
-collection = database[""]
 
+initializer = DatabaseSetUp(
+    "",
+    "",
+    ""
+    )

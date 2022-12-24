@@ -1,6 +1,7 @@
 from fastapi import APIRouter
 from bson import ObjectId
-from configuration.database import collection
+
+from configuration.database import initializer
 
 from model.model import DataTemplate
 from configuration.schemas import SerializerForSingleObj, SerializerForMultipleObjs
@@ -11,17 +12,17 @@ router = APIRouter()
 
 @router.get("/GetAll")
 async def get_all():
-    multiple_data = SerializerForMultipleObjs(collection.find())
+    multiple_data = SerializerForMultipleObjs(initializer.collection.find())
     return {"status": "OK", "multiple_data": multiple_data}
 @router.get("/Get/{id}")
 async def get_certain(id: str):
-    single_data = SerializerForMultipleObjs(collection.find({"_id": ObjectId(id)}))
+    single_data = SerializerForMultipleObjs(initializer.collection.find({"_id": ObjectId(id)}))
     return {"status": "OK", "single_data": single_data}
 
 @router.post("/SinglePost")
 async def single_post(data: DataTemplate):
-    _id = collection.insert_one(dict(data))
-    single_data = SerializerForMultipleObjs(collection.find({"_id": _id.inserted_id}))
+    _id = initializer.collection.insert_one(dict(data))
+    single_data = SerializerForMultipleObjs(initializer.collection.find({"_id": _id.inserted_id}))
     return {"status": "OK", "single_data": single_data}
 
 # @router.put("/SingleUpdate/{country}")
