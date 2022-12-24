@@ -1,9 +1,9 @@
-def EntityForSingleObject(thing) -> dict:
+def SerializerForSingleObj(thing) -> dict:
     return {
         "id": str(thing["_id"]),
         "name": thing["name"],
         "counter": thing["counter"]
     }
 
-def EntityForMultipleObject(thing) -> list:
-    return [EntityForSingleObject(it) for it in thing]
+def SerializerForMultipleObjs(thing) -> list:
+    return [SerializerForSingleObj(it) for it in thing]

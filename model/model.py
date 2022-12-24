@@ -1,6 +1,8 @@
+# from schematics.models import Model
+from pydantic import BaseModel
 
-from schematics.models import Model
-class DataTemplate(Model):
+
+class DataTemplate(BaseModel):
     id: int
     name: str
     counter: int
