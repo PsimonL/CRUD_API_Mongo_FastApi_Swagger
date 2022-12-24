@@ -1,5 +1,6 @@
 from pymongo import MongoClient
 
+
 class DatabaseSetUp:
     def __init__(self, mongoClientURL, dbName, collectionName):
         self.client = MongoClient(mongoClientURL)
@@ -11,4 +12,4 @@ initializer = DatabaseSetUp(
     "",
     "",
     ""
-    )
+)

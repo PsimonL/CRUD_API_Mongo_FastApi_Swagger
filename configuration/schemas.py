@@ -7,5 +7,6 @@ def SerializerForSingleObj(thing) -> dict:
         "net_worth": thing["net_worth"]
     }
 
+
 def SerializerForMultipleObjs(thing) -> list:
     return [SerializerForSingleObj(it) for it in thing]
