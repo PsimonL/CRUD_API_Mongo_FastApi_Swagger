@@ -1,4 +1,8 @@
-Basically api is working, need to troubleshoot token more but should be working on average basis.
+Need to troubleshoot token more but should be working on average basis.
+Need to hide mongo credientials.
+Setup on Docker
 
 https://www.youtube.com/watch?v=0_seNFCtglk
 https://testdriven.io/blog/fastapi-jwt-auth/
+https://codevoweb.com/api-with-python-fastapi-and-mongodb-jwt-authentication/
+https://codevoweb.com/api-with-python-fastapi-and-mongodb-jwt-authentication/
