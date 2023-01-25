@@ -1,3 +1,4 @@
 Basically api is working, need to troubleshoot token more but should be working on average basis.
 
 https://www.youtube.com/watch?v=0_seNFCtglk
+https://testdriven.io/blog/fastapi-jwt-auth/
